@@ -253,11 +253,11 @@ const FEIRA_GAMES_VIDEOS = [
   }
 ];
 
-// Photos of Feira 2024 (39 photos)
-const PHOTOS_2024 = Array.from({ length: 40 }, (_, i) => {
-  const num = String(i + 1).padStart(2, '0');
+// Photos of Feira 2024 (152 high-res optimized photos from OneDrive)
+const PHOTOS_2024 = Array.from({ length: 152 }, (_, i) => {
+  const num = String(i + 1).padStart(3, '0');
   return `assets/feira-2024/foto_${num}.jpg`;
-}).filter(p => !p.endsWith('foto_38.jpg')); // foto_38 failed in original dump
+});
 
 // Photos of Feira 2025 (40 photos)
 const PHOTOS_2025 = Array.from({ length: 40 }, (_, i) => {
