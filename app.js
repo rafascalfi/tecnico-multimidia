@@ -633,7 +633,7 @@ function setupFeiraTabs() {
   });
 }
 
-// Countdown to Feira Games 2026
+// Countdown to Feira Games 2026 (03/12/2026)
 function setupCountdown() {
   const daysEl = document.getElementById("count-days");
   const hoursEl = document.getElementById("count-hours");
@@ -642,7 +642,8 @@ function setupCountdown() {
 
   if (!daysEl) return;
 
-  const targetDate = new Date("2026-11-27T08:00:00").getTime();
+  // Set target date to December 3, 2026 at 08:00
+  const targetDate = new Date("2026-12-03T08:00:00").getTime();
 
   function update() {
     const now = new Date().getTime();
