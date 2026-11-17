@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Técnico em Multimídia & Jogos | SESI Fernandópolis</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Portal oficial do Curso Técnico em Multimídia e Jogos do SESI Fernandópolis. Conheça os projetos de gamificação, produções audiovisuais e a Feira de Games.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#8b5cf6',
+              cyan: '#06b6d4',
+              pink: '#ec4899',
+              dark: '#07090e',
+              card: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#07090e] text-slate-200 antialiased relative min-h-screen selection:bg-purple-500 selection:text-white">
+
+  <!-- Ambient Glow Effects -->
+  <div class="hero-ambient-glow"></div>
+  <div class="fixed top-1/2 -left-48 w-96 h-96 bg-cyan-600/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 -right-48 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#07090e]/80 border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 p-[1.5px] shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-shadow">
+          <div class="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center">
+            <!-- Gamepad / Multimedia icon -->
+            <svg class="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <span class="text-xs tracking-wider uppercase font-bold text-cyan-400 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-dot"></span>
+            SESI Fernandópolis
+          </span>
+          <h1 class="text-base sm:text-lg font-bold text-white tracking-tight font-heading group-hover:text-purple-300 transition-colors">
+            Técnico em Multimídia & Jogos
+          </h1>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="#inicio" class="hover:text-cyan-400 transition-colors">Início</a>
+        <a href="#areas" class="hover:text-cyan-400 transition-colors">Competências</a>
+        <a href="#feira" class="hover:text-cyan-400 transition-colors flex items-center gap-1">
+          Feira de Games
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">2026</span>
+        </a>
+        <a href="#audiovisual" class="hover:text-cyan-400 transition-colors">Produções</a>
+        <a href="#gamificacao" class="hover:text-cyan-400 transition-colors">Projetos</a>
+        <a href="#docentes" class="hover:text-cyan-400 transition-colors">Docentes</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#gamificacao" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-md shadow-purple-600/30 hover:shadow-purple-600/50 transition-all flex items-center gap-2 border border-purple-400/30">
+          <svg class="w-4 h-4 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+          Explorar Projetos
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-nav" class="hidden lg:hidden px-4 pt-2 pb-6 bg-[#090d16] border-b border-slate-800 text-sm space-y-3">
+      <a href="#inicio" class="block py-2 text-slate-300 hover:text-cyan-400">Início</a>
+      <a href="#areas" class="block py-2 text-slate-300 hover:text-cyan-400">Competências</a>
+      <a href="#feira" class="block py-2 text-slate-300 hover:text-cyan-400">Feira de Games 2026</a>
+      <a href="#audiovisual" class="block py-2 text-slate-300 hover:text-cyan-400">Produções Audiovisuais</a>
+      <a href="#gamificacao" class="block py-2 text-slate-300 hover:text-cyan-400">Projetos de Gamificação</a>
+      <a href="#docentes" class="block py-2 text-slate-300 hover:text-cyan-400">Corpo Docente</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden bg-grid-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-4xl mx-auto">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-purple-500/30 text-xs font-semibold text-purple-300 mb-6 shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>Formação Técnica Profissionalizante • SESI Fernandópolis</span>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white font-heading leading-tight mb-6">
+          Onde Criatividade, Tecnologia e <span class="text-gradient-creative">Jogos Digitais</span> se Encontram.
+        </h2>
+
+        <!-- Description -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed mb-10 max-w-3xl mx-auto">
+          Capacitamos mentes inovadoras nas fronteiras do <strong class="text-white font-semibold">Game Design</strong>, <strong class="text-white font-semibold">Cinema & Audiovisual</strong>, <strong class="text-white font-semibold">UI/UX</strong> e <strong class="text-white font-semibold">Gamificação</strong>. Uma jornada prática com projetos reais, festivais de cinema e feiras anuais de games.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#gamificacao" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+            </svg>
+            Ver Projetos dos Alunos (16 Grupos)
+          </a>
+
+          <a href="#audiovisual" class="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500 transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            Assistir Produções em Vídeo
+          </a>
+
+          <a href="#feira" class="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-cyan-300 bg-cyan-950/40 hover:bg-cyan-900/50 border border-cyan-500/30 transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Feira de Games 2026
+          </a>
+        </div>
+
+        <!-- 4 Highlights Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-cyan-400 font-heading mb-1">16</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Equipes de Gamificação</div>
+            <div class="text-[11px] text-slate-400 mt-1">Projetos autorais ativos</div>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-purple-400 font-heading mb-1">03</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Edições da Feira</div>
+            <div class="text-[11px] text-slate-400 mt-1">2024 • 2025 • 2026</div>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-pink-400 font-heading mb-1">ECO</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Mostras & Festivais</div>
+            <div class="text-[11px] text-slate-400 mt-1">Festival ECOFILMES 2025</div>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-emerald-400 font-heading mb-1">100%</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Prática de Mercado</div>
+            <div class="text-[11px] text-slate-400 mt-1">Portfólio e bancas reais</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AS 4 GRANDES ÁREAS DO CURSO -->
+  <section id="areas" class="py-20 border-t border-slate-900 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-purple-400 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30">
+          Matriz de Competências
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-4 mb-4">
+          O Que Você Domina no Técnico em Multimídia
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400">
+          Uma formação interdisciplinar completa que une arte digital, cinematografia, engenharia lúdica e experiência do usuário.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Audiovisual & Cinema -->
+        <div class="glass-panel rounded-2xl p-6 card-hover-lift border border-slate-800 hover:border-purple-500/50 group">
+          <div class="w-12 h-12 rounded-xl bg-purple-600/20 border border-purple-500/40 text-purple-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Produção Audiovisual & Cinema</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Roteirização técnica, direção de fotografia, captação com câmeras profissionais, iluminação de estúdio, edição avançada e finalização de áudio.
+          </p>
+          <div class="flex flex-wrap gap-1 text-[11px] text-purple-300 font-mono">
+            <span>#Roteiro</span> • <span>#Edição</span> • <span>#VFX</span> • <span>#Áudio</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Game Design & Gamedev -->
+        <div class="glass-panel rounded-2xl p-6 card-hover-lift border border-slate-800 hover:border-cyan-500/50 group">
+          <div class="w-12 h-12 rounded-xl bg-cyan-600/20 border border-cyan-500/40 text-cyan-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Game Design & Desenvolvimento</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Construção de mecânicas de gameplay, level design, arte 2D/3D, lógica de programação em engines e preparação para publicação em feiras.
+          </p>
+          <div class="flex flex-wrap gap-1 text-[11px] text-cyan-300 font-mono">
+            <span>#Gamedev</span> • <span>#LevelDesign</span> • <span>#PixelArt</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Design Gráfico & UI/UX -->
+        <div class="glass-panel rounded-2xl p-6 card-hover-lift border border-slate-800 hover:border-pink-500/50 group">
+          <div class="w-12 h-12 rounded-xl bg-pink-600/20 border border-pink-500/40 text-pink-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Design Gráfico & UI/UX</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Identidade visual marcante, paletas cromáticas, tipografia, design de interfaces digitais imersivas, ergonomia e testes de usabilidade.
+          </p>
+          <div class="flex flex-wrap gap-1 text-[11px] text-pink-300 font-mono">
+            <span>#Branding</span> • <span>#Figma</span> • <span>#UXResearch</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Gamificação & Novas Mídias -->
+        <div class="glass-panel rounded-2xl p-6 card-hover-lift border border-slate-800 hover:border-emerald-500/50 group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2 font-heading">Gamificação & Impacto</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Aplicação de elementos de jogos para motivar, engajar e transformar processos educativos, corporativos, de saúde e causas sociais.
+          </p>
+          <div class="flex flex-wrap gap-1 text-[11px] text-emerald-300 font-mono">
+            <span>#Octalysis</span> • <span>#Engajamento</span> • <span>#Inovação</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CENTRAL DA FEIRA DE GAMES (2024 • 2025 • 2026) -->
+  <section id="feira" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30">
+            Evento Anual de Destaque
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-3">
+            Central da Feira de Games
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-2xl">
+            A celebração onde os alunos apresentam seus jogos originais ao público, testam a recepção do mercado e realizam mostras ao vivo.
+          </p>
+        </div>
+
+        <!-- Year Tabs -->
+        <div class="flex items-center gap-2 p-1.5 rounded-xl bg-slate-900 border border-slate-800">
+          <button data-year="2026" class="feira-tab-btn active px-4 py-2 rounded-lg text-xs font-bold border border-transparent transition-all">
+            Feira 2026 (Próxima)
+          </button>
+          <button data-year="2025" class="feira-tab-btn px-4 py-2 rounded-lg text-xs font-bold border border-transparent transition-all text-slate-400">
+            II Feira (2025)
+          </button>
+          <button data-year="2024" class="feira-tab-btn px-4 py-2 rounded-lg text-xs font-bold border border-transparent transition-all text-slate-400">
+            I Feira (2024)
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB CONTENT: 2026 -->
+      <div class="feira-content" data-year="2026">
+        <div class="glass-panel-elevated rounded-3xl p-8 sm:p-12 border border-purple-500/30 relative overflow-hidden">
+          
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="max-w-3xl">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold mb-4">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Em Preparação
+            </span>
+
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-white font-heading mb-4">
+              III Feira de Games 2026: A Nova Fronteira
+            </h3>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8">
+              A terceira edição da Feira de Games do Curso Técnico em Multimídia trará jogos completos desenvolvidos pelas novas turmas, campeonatos de esports, arena de playtest e apresentações musicais.
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="mb-8">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">
+                Contagem Regressiva para a Abertura:
+              </span>
+              <div class="grid grid-cols-4 gap-3 max-w-md text-center">
+                <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl">
+                  <div id="count-days" class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-heading">00</div>
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Dias</div>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl">
+                  <div id="count-hours" class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-heading">00</div>
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Horas</div>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl">
+                  <div id="count-mins" class="text-2xl sm:text-3xl font-extrabold text-pink-400 font-heading">00</div>
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Minutos</div>
+                </div>
+                <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl">
+                  <div id="count-secs" class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-heading">00</div>
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Segundos</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>SESI Fernandópolis - SP</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <span>Supervisão: Prof. Heber Roberto & Prof. Rafael Scalfi</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB CONTENT: 2025 -->
+      <div class="feira-content hidden" data-year="2025">
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800 mb-8">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="text-xs font-bold text-cyan-400">Edição Histórica • 28/11/2025</span>
+              <h3 class="text-2xl font-bold text-white font-heading mt-1">
+                II Feira de Games: Cobertura Oficial em Vídeo
+              </h3>
+            </div>
+            <span class="px-3 py-1 rounded bg-slate-900 border border-slate-700 text-xs text-slate-300 font-mono">
+              Canal Prof. Rafael Scalfi
+            </span>
+          </div>
+          
+          <!-- 5 Videos Grid of Feira Games 2025 -->
+          <div id="feira-videos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB CONTENT: 2024 -->
+      <div class="feira-content hidden" data-year="2024">
+        <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-800 text-center max-w-3xl mx-auto">
+          <div class="w-16 h-16 rounded-2xl bg-purple-600/20 border border-purple-500/40 text-purple-400 flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white font-heading mb-3">
+            I Feira de Games 2024: O Ponto de Partida
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">
+            A primeira edição marcou a estreia pública das produções de jogos digitais do Curso Técnico em Multimídia, reunindo familiares, estudantes e a comunidade escolar do SESI para prestigiar a criatividade dos alunos.
+          </p>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
+            <span>Mais de 90 registros fotográficos e protótipos apresentados</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOSTRA AUDIOVISUAL & PRODUÇÕES DOS ALUNOS -->
+  <section id="audiovisual" class="py-20 border-t border-slate-900 bg-slate-950/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-pink-400 px-3 py-1 rounded-full bg-pink-950/60 border border-pink-500/30">
+            Cinema, Campanhas & Festivais
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-3">
+            Produções Audiovisuais em Destaque
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-2xl">
+            Projetos cinematográficos e de comunicação desenvolvidos pelos estudantes com direção de arte, edição e pós-produção profissional.
+          </p>
+        </div>
+
+        <a href="https://www.youtube.com/@rafaelscalfi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-purple-400 hover:text-purple-300 transition-colors">
+          <span>Ver mais no canal do Prof. Rafael Scalfi</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Audiovisual Videos Grid -->
+      <div id="videos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VITRINE DE GAMIFICAÇÃO (16 GRUPOS DE ALUNOS) -->
+  <section id="gamificacao" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30">
+          Galeria de Trabalhos Práticos
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-3 mb-4">
+          Showcase de Gamificação dos Alunos
+        </h2>
+        <p class="text-sm text-slate-400">
+          Confira os 16 projetos autorais desenvolvidos pelas equipes de estudantes, sob a mentoria dos professores Heber Roberto e Rafael Scalfi.
+        </p>
+      </div>
+
+      <!-- Search & Filters Bar -->
+      <div class="glass-panel p-4 rounded-2xl border border-slate-800 mb-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          
+          <!-- Search Input -->
+          <div class="relative w-full md:w-96">
+            <input 
+              type="text" 
+              id="search-input" 
+              placeholder="Buscar por aluno, tema ou grupo..." 
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+            />
+            <svg class="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          <!-- Category Filter Buttons -->
+          <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 text-xs font-semibold">
+            <button data-filter="all" class="filter-btn px-3.5 py-2 rounded-xl bg-purple-600 text-white border border-purple-400 transition-all">
+              Todos
+            </button>
+            <button data-filter="gamificacao" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+              Gamificação
+            </button>
+            <button data-filter="games" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+              Gamedev
+            </button>
+            <button data-filter="audiovisual" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+              Multimídia
+            </button>
+            <button data-filter="social" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+              Social
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Counter Indicator -->
+        <div class="flex items-center justify-between text-xs text-slate-400 mt-3 pt-3 border-t border-slate-800/80">
+          <span id="projects-count">16 projetos disponíveis</span>
+          <span class="text-slate-500">Supervisão: Prof. Heber Roberto & Prof. Rafael Scalfi</span>
+        </div>
+      </div>
+
+      <!-- 16 Groups Grid Container -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Injected via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CORPO DOCENTE & MENTORIA -->
+  <section id="docentes" class="py-20 border-t border-slate-900 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-purple-400 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-500/30">
+          Supervisão Pedagógica
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-3 mb-4">
+          Nossos Professores & Mentores
+        </h2>
+        <p class="text-sm text-slate-400">
+          Corpo docente com vivência prática no mercado criativo, orientando cada etapa do desenvolvimento técnico e humano dos estudantes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Prof. Rafael Scalfi -->
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800 hover:border-purple-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center text-white text-xl font-extrabold font-heading shadow-lg shadow-purple-600/30">
+                RS
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white font-heading">Prof. Rafael Scalfi</h3>
+                <p class="text-xs text-purple-400 font-medium">Multimídia, Audiovisual & Games</p>
+                <span class="text-[11px] text-slate-400">SESI Fernandópolis</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Orientador técnico nas áreas de cinematografia, sonorização, montagem audiovisual, narrativas transmídia e organização da Feira de Games.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-mono">Curadoria & Produção</span>
+            <span class="px-2.5 py-1 rounded bg-purple-950 text-purple-300 border border-purple-500/30">Docente</span>
+          </div>
+        </div>
+
+        <!-- Prof. Heber Roberto -->
+        <div class="glass-panel rounded-3xl p-8 border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-600 flex items-center justify-center text-white text-xl font-extrabold font-heading shadow-lg shadow-cyan-600/30">
+                HR
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white font-heading">Prof. Heber Roberto</h3>
+                <p class="text-xs text-cyan-400 font-medium">Gamificação, Interatividade & Projetos</p>
+                <span class="text-[11px] text-slate-400">SESI Fernandópolis</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Mentor no desenvolvimento de mecânicas de gamificação, ideação conceitual, estruturas lúdicas e acompanhamento metodológico dos 16 grupos de estudantes.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-mono">Metodologia & Inovação</span>
+            <span class="px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-500/30">Docente</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-900 bg-[#05070a] py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-purple-600/20 border border-purple-500/40 flex items-center justify-center text-purple-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm font-bold text-white font-heading">Curso Técnico em Multimídia & Jogos</div>
+          <div class="text-[11px] text-slate-500">SESI Fernandópolis • São Paulo</div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-slate-400 font-medium">
+        <a href="#inicio" class="hover:text-white transition-colors">Início</a>
+        <a href="#areas" class="hover:text-white transition-colors">Áreas</a>
+        <a href="#feira" class="hover:text-white transition-colors">Feira de Games</a>
+        <a href="#audiovisual" class="hover:text-white transition-colors">Vídeos</a>
+        <a href="#gamificacao" class="hover:text-white transition-colors">Alunos</a>
+      </div>
+
+      <div class="text-slate-500 text-center md:text-right">
+        <div>Reformulação de Identidade Visual</div>
+        <div class="text-[10px]">Supervisão: Prof. Heber Roberto & Prof. Rafael Scalfi</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL PLAYER -->
+  <div id="video-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
+    <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-slate-800">
+        <h4 id="video-modal-title" class="text-sm font-bold text-white truncate">Reproduzindo Vídeo</h4>
+        <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="video-iframe-container" class="aspect-video w-full bg-black">
+        <!-- Iframe injected on click -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
+    <div class="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+      <div id="project-modal-content">
+        <!-- Content injected on click -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    // Mobile navigation toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileBtn && mobileNav) {
+      mobileBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+      });
+      // Close mobile menu on link click
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
