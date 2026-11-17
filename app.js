@@ -253,16 +253,35 @@ const FEIRA_GAMES_VIDEOS = [
   }
 ];
 
+// Photos of Feira 2024 (39 photos)
+const PHOTOS_2024 = Array.from({ length: 40 }, (_, i) => {
+  const num = String(i + 1).padStart(2, '0');
+  return `assets/feira-2024/foto_${num}.jpg`;
+}).filter(p => !p.endsWith('foto_38.jpg')); // foto_38 failed in original dump
+
+// Photos of Feira 2025 (40 photos)
+const PHOTOS_2025 = Array.from({ length: 40 }, (_, i) => {
+  const num = String(i + 1).padStart(2, '0');
+  return `assets/feira-2025/foto_${num}.jpg`;
+});
+
+// Lightbox state
+let currentGallery = [];
+let currentPhotoIndex = 0;
+
 // DOM Elements
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects(PROJECT_GROUPS);
   renderAudiovisualVideos();
   renderFeiraVideos();
+  renderPhotos("gallery-2025", PHOTOS_2025, "II Feira de Games 2025");
+  renderPhotos("gallery-2024", PHOTOS_2024, "I Feira de Games 2024");
   setupFilters();
   setupSearch();
   setupFeiraTabs();
   setupCountdown();
   setupModals();
+  setupLightboxKeyboard();
 });
 
 // Render Projects List
@@ -370,7 +389,6 @@ function renderAudiovisualVideos() {
         />
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
         
-        <!-- Play Button Overlay -->
         <div class="absolute inset-0 flex items-center justify-center">
           <div class="w-14 h-14 rounded-full bg-purple-600/90 text-white flex items-center justify-center shadow-lg shadow-purple-600/40 play-btn-overlay border border-purple-400/50">
             <svg class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -446,6 +464,92 @@ function renderFeiraVideos() {
       </div>
     </div>
   `).join('');
+}
+
+// Render Photo Galleries for Feira 2024 and 2025
+function renderPhotos(containerId, photosList, galleryTitle) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  container.innerHTML = photosList.map((src, index) => `
+    <div class="group relative aspect-video sm:aspect-square bg-slate-900 rounded-xl overflow-hidden border border-slate-800/80 hover:border-purple-500/50 cursor-pointer card-hover-lift" onclick="openLightbox('${containerId}', ${index})">
+      <img 
+        src="${src}" 
+        alt="${galleryTitle} - Foto ${index + 1}" 
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5">
+        <span class="text-[11px] font-medium text-white flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+          </svg>
+          Ampliar Foto
+        </span>
+      </div>
+    </div>
+  `).join('');
+}
+
+// Lightbox Logic
+function openLightbox(galleryType, index) {
+  if (galleryType === 'gallery-2025') {
+    currentGallery = PHOTOS_2025;
+  } else {
+    currentGallery = PHOTOS_2024;
+  }
+
+  currentPhotoIndex = index;
+  updateLightboxImage();
+
+  const modal = document.getElementById("lightbox-modal");
+  if (modal) {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function updateLightboxImage() {
+  const imgEl = document.getElementById("lightbox-img");
+  const counterEl = document.getElementById("lightbox-counter");
+  if (!imgEl || currentGallery.length === 0) return;
+
+  imgEl.src = currentGallery[currentPhotoIndex];
+  if (counterEl) {
+    counterEl.innerText = `Foto ${currentPhotoIndex + 1} de ${currentGallery.length}`;
+  }
+}
+
+function nextLightboxImage() {
+  if (currentGallery.length === 0) return;
+  currentPhotoIndex = (currentPhotoIndex + 1) % currentGallery.length;
+  updateLightboxImage();
+}
+
+function prevLightboxImage() {
+  if (currentGallery.length === 0) return;
+  currentPhotoIndex = (currentPhotoIndex - 1 + currentGallery.length) % currentGallery.length;
+  updateLightboxImage();
+}
+
+function closeLightbox() {
+  const modal = document.getElementById("lightbox-modal");
+  if (!modal) return;
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+  document.body.style.overflow = "auto";
+}
+
+function setupLightboxKeyboard() {
+  document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("lightbox-modal");
+    if (!modal || modal.classList.contains("hidden")) return;
+
+    if (e.key === "ArrowRight") nextLightboxImage();
+    if (e.key === "ArrowLeft") prevLightboxImage();
+    if (e.key === "Escape") closeLightbox();
+  });
 }
 
 // Setup Filters
@@ -538,7 +642,6 @@ function setupCountdown() {
 
   if (!daysEl) return;
 
-  // Set target date to November 27, 2026
   const targetDate = new Date("2026-11-27T08:00:00").getTime();
 
   function update() {
@@ -572,12 +675,13 @@ function setupCountdown() {
 function setupModals() {
   const videoModal = document.getElementById("video-modal");
   const projectModal = document.getElementById("project-modal");
+  const lightboxModal = document.getElementById("lightbox-modal");
 
-  // Close with Esc
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeVideoModal();
       closeProjectModal();
+      closeLightbox();
     }
   });
 
@@ -590,6 +694,12 @@ function setupModals() {
   if (projectModal) {
     projectModal.addEventListener("click", (e) => {
       if (e.target === projectModal) closeProjectModal();
+    });
+  }
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener("click", (e) => {
+      if (e.target === lightboxModal) closeLightbox();
     });
   }
 }
@@ -711,8 +821,12 @@ function closeProjectModal() {
   document.body.style.overflow = "auto";
 }
 
-// Window global exposure for inline onclick handlers
+// Window global exposure
 window.openVideoModal = openVideoModal;
 window.closeVideoModal = closeVideoModal;
 window.openProjectModal = openProjectModal;
 window.closeProjectModal = closeProjectModal;
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.nextLightboxImage = nextLightboxImage;
+window.prevLightboxImage = prevLightboxImage;
