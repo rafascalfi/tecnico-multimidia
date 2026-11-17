@@ -259,9 +259,9 @@ const PHOTOS_2024 = Array.from({ length: 152 }, (_, i) => {
   return `assets/feira-2024/foto_${num}.jpg`;
 });
 
-// Photos of Feira 2025 (40 photos)
-const PHOTOS_2025 = Array.from({ length: 40 }, (_, i) => {
-  const num = String(i + 1).padStart(2, '0');
+// Photos of Feira 2025 (133 high-res photos from Feira de Games 2025)
+const PHOTOS_2025 = Array.from({ length: 133 }, (_, i) => {
+  const num = String(i + 1).padStart(3, '0');
   return `assets/feira-2025/foto_${num}.jpg`;
 });
 
