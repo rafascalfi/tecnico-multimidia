@@ -3,179 +3,211 @@
 const PROJECT_GROUPS = [
   {
     id: 1,
-    title: "Projeto de Gamificação #01",
-    theme: "Narrativa Interativa & Gamificação Educacional",
+    title: "Mundo Educativo SESI",
+    theme: "Gamificação Educacional & Dinâmicas Lúdicas",
     tag: "Gamificação",
     category: "gamificacao",
+    image: "assets/gamificacao/grupo_01.jpg",
+    url: "https://sites.google.com/view/mundoeducativosesi",
     members: ["Guilherme Maciel de Freitas", "Júlia Mazetti Silva", "Nathalia Guerreiro Silva", "Yasmin de Oliveira Carvalho"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Pesquisa aplicada e desenvolvimento de protótipo gamificado focando em dinâmicas de engajamento, storytelling e design de interação.",
-    tech: ["Game Design", "Roteiro Narrativo", "UI/UX", "Prototipagem"]
+    description: "Ambiente gamificado com atividades interativas e desafios lúdicos voltados à educação e ao engajamento dos estudantes.",
+    tech: ["Gamificação", "Web Design", "Design Educacional", "Storytelling"]
   },
   {
     id: 2,
-    title: "Projeto de Gamificação #02",
-    theme: "Mecânicas de Jogos & Lógica Interativa",
+    title: "Scalforce",
+    theme: "Ação Espacial & Gamedev 2D",
     tag: "Gamedev",
     category: "games",
+    image: "assets/gamificacao/grupo_02.jpg",
+    url: "https://scalforce.netlify.app/",
     members: ["João Pedro Rodrigues Rafael", "Lucas Alonso Perecim", "Pedro Sastre Vilcher Della Rosa", "Vitor Gabriel Pereira Gregorio"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Estruturação de desafios, progressão e balanceamento de regras para jogos interativos com ênfase em experiência do jogador (Player Experience).",
-    tech: ["Lógica de Jogos", "Pixel Art", "Level Design", "Áudio Interativo"]
+    description: "Jogo de batalha e exploração espacial com mecânicas de esquiva, tiro, pontuação e progressão de fases.",
+    tech: ["Gamedev", "Lógica de Jogos", "Pixel Art", "Level Design"]
   },
   {
     id: 3,
-    title: "Projeto de Gamificação #03",
-    theme: "Imersão Sonora e Visual em Mídias Digitais",
+    title: "PlayJoy",
+    theme: "Plataforma de Minigames & Diversão Interativa",
     tag: "Multimídia",
     category: "audiovisual",
+    image: "assets/gamificacao/grupo_03.jpg",
+    url: "https://rafascalfi.github.io/playjoy/",
     members: ["Arthur Marchiori Gubatto", "Guilherme Gabriel Oliveira Ferreira", "Jullia Fonseca Malaquias", "Kamily Vitoria de Lima Valadão"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Criação de identidade visual e sound design integrados para enriquecer a ambientação de projetos multimídia e jogos.",
-    tech: ["Sound Design", "Concept Art", "Design Gráfico", "Animação"]
+    description: "Hub de jogos interativos com visual colorido, desafios dinâmicos e trilha sonora vibrante para todas as idades.",
+    tech: ["UI/UX", "Sound Design", "Animação 2D", "Web Game"]
   },
   {
     id: 4,
-    title: "Projeto de Gamificação #04",
-    theme: "Ambientes Virtuais e Interatividade",
+    title: "Padrinhos Mágicos: A Aventura",
+    theme: "Jogo de Aventura & Plataforma Temático",
     tag: "Gamedev",
     category: "games",
+    image: "assets/gamificacao/grupo_04.jpg",
+    url: "https://rafascalfi.github.io/padrinhos/",
     members: ["Guilherme Biata Sartoreto", "Olivia Toledo Brizoti", "Paulo Otávio Castrequini da Silva", "Renan Faria de Souza"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Construção de cenários e mundos digitais, trabalhando composição espacial, iluminação e caminhos de navegação do jogador.",
-    tech: ["Cenografia Digital", "Modelagem", "Iluminação", "UI Dinâmica"]
+    description: "Experiência de plataforma inspirada na clássica animação, superando obstáculos e coletando itens mágicos.",
+    tech: ["Platformer", "Pixel Art", "Animação", "Game Feel"]
   },
   {
     id: 5,
-    title: "Projeto de Gamificação #05",
-    theme: "Storytelling e Engajamento Social",
+    title: "Langland",
+    theme: "Gamificação de Idiomas & Vocabulário",
     tag: "Social",
     category: "social",
+    image: "assets/gamificacao/grupo_05.jpg",
+    url: "https://rafascalfi.github.io/langland/",
     members: ["Beatriz Carvalho Fraga", "Gabriel Nagata Maciel", "Ruan Henrique Batista Tolentino", "Sophia Maria Nascimento Ladeia"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Desenvolvimento de experiências lúdicas orientadas à conscientização e comunicação de impacto comunitário e cultural.",
-    tech: ["Roteiro Social", "Design Emocional", "Comunicação", "Direção de Arte"]
+    description: "Jogo pedagógico para aprendizado interativo de línguas, associando palavras, desafios visuais e pronúncia.",
+    tech: ["Educação", "Gamificação", "Design Gráfico", "UI Dinâmica"]
   },
   {
     id: 6,
-    title: "Projeto de Gamificação #06",
-    theme: "Gamificação & Design Centrado no Usuário",
+    title: "Matemágica SESI",
+    theme: "Desafios Lógicos & Matemática Gamificada",
     tag: "Gamificação",
     category: "gamificacao",
+    image: "assets/gamificacao/grupo_06.jpg",
+    url: "https://matemagicasesi.netlify.app/",
     members: ["Afonso Castelli Uliana", "Danielle Marchetti Rodrigues", "Júlia Trivelato Almeida", "Mariana Galinari Oliveira"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Aplicação dos 8 pilares da gamificação Octalysis para potencializar motivação e aprendizado em tarefas interativas.",
-    tech: ["UX Research", "Gamification Framework", "Wireframing", "Testes de Usuário"]
+    description: "Desafios matemáticos transformados em feitiços e quebra-cabeças instigantes para estimular o raciocínio rápido.",
+    tech: ["Lógica Matemática", "Gamification", "UX Research", "Ilustração"]
   },
   {
     id: 7,
-    title: "Projeto de Gamificação #07",
-    theme: "Direção de Arte e Estética de Jogos",
+    title: "Bloom SESI",
+    theme: "Botânica, Natureza & Consciência Ecológica",
     tag: "Design",
-    category: "games",
+    category: "social",
+    image: "assets/gamificacao/grupo_07.jpg",
+    url: "https://bloomsesi.netlify.app/",
     members: ["Ana Laura Camilo Gouveia", "Gabriel Henrique Rosa Larocca", "Kauã Henrique Leite Ferreira", "Leticia Crispim Alves"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Criação de paleta cromática, assets gráficos e estilo visual marcante para interface de jogos e produtos digitais.",
-    tech: ["Ilustração Digital", "Tipografia", "Asset Pipeline", "UI/UX"]
+    description: "Jogo interativo de cultivo e sustentabilidade, onde o jogador aprende sobre biodiversidade enquanto cuida de seu jardim digital.",
+    tech: ["Sustentabilidade", "UI/UX", "Paleta de Cores", "Asset Pipeline"]
   },
   {
     id: 8,
-    title: "Projeto de Gamificação #08",
-    theme: "Jogos de Aventura & Progressão",
+    title: "Backyardigans Adventure",
+    theme: "Mundo Lúdico Infantil & Narrativa Musical",
     tag: "Gamedev",
     category: "games",
+    image: "assets/gamificacao/grupo_08.jpg",
+    url: "https://rafascalfi.github.io/backyardigans1/",
     members: ["Mattheus Maia de Oliveira", "Maria Eduarda de Castro Costa", "Vitoria Gabrieli Rosa Larocca", "Yuri Augusto Bento Castilho Gomes"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Design de mecânicas de exploração e recompensas dinâmicas, refinando curva de aprendizado e retenção do jogador.",
-    tech: ["Game Mechanics", "Reward Systems", "Storyboarding", "Audio FX"]
+    description: "Aventura musical interativa com personagens carismáticos, exploração de cenários fantásticos e mecânicas acessíveis.",
+    tech: ["Narrativa", "Animação 2D", "Sound Design", "Gamedev"]
   },
   {
     id: 9,
-    title: "Projeto de Gamificação #09",
-    theme: "Comunicação Audiovisual & Transmídia",
-    tag: "Audiovisual",
-    category: "audiovisual",
+    title: "Georush",
+    theme: "Geografia, Países & Desafio em Tempo Real",
+    tag: "Gamificação",
+    category: "gamificacao",
+    image: "assets/gamificacao/grupo_09.jpg",
+    url: "https://georush.netlify.app/",
     members: ["Murilo Pereira Devechi", "Giovana Nilo Silva", "Julia Storti Souza", "Laura de Sousa Silva"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Integração entre linguagens de vídeo, animação e interfaces interativas para plataformas multiplataforma.",
-    tech: ["Edição de Vídeo", "Motion Graphics", "Transmídia", "Design Visual"]
+    description: "Quiz frenético de geografia com mapa interativo, capitais do mundo, bandeiras e corrida contra o relógio.",
+    tech: ["Geografia", "Frontend Ágil", "Competição", "Design Visual"]
   },
   {
     id: 10,
-    title: "Projeto de Gamificação #10",
-    theme: "Estratégia Lúdica e Resolução de Problemas",
-    tag: "Gamificação",
-    category: "gamificacao",
+    title: "Word Guessing",
+    theme: "Jogo de Adivinhação de Palavras & Vocabulário",
+    tag: "Puzzle",
+    category: "games",
+    image: "assets/gamificacao/grupo_10.jpg",
+    url: "https://wordguessing1.netlify.app/",
     members: ["Murilo Neres Delboni", "Luisa Melo Fernandes Beatta", "Ana Clara Papadio Favero", "Bruno Brasileiro de Matos Silva"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Concepção de quebra-cabeças e puzzles inteligentes aplicados à resolução de desafios práticos em ambientes colaborativos.",
-    tech: ["Puzzle Design", "Dinâmicas de Grupo", "Prototipagem Ágil", "UX"]
+    description: "Desafio de dedução e vocabulário estilo wordle/termo com mecânicas viciantes de pistas e tentativas.",
+    tech: ["Lógica", "Word Game", "Minimalismo", "UX Design"]
   },
   {
     id: 11,
-    title: "Projeto de Gamificação #11",
-    theme: "Narrativas Ramificadas e Escolhas",
-    tag: "Narrativa",
+    title: "Lost Legacy",
+    theme: "RPG de Aventura & Exploração Narrativa",
+    tag: "Gamedev",
     category: "games",
+    image: "assets/gamificacao/grupo_11.jpg",
+    url: "https://lostlegacy.netlify.app/",
     members: ["Maria Julia Pereira Savazi", "Eduardo Moita de Oliveira", "Pedro Henrique Avellar Britto da Silva", "Fernanda Batista Fernandes"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Elaboração de roteiro interativo com múltiplos desfechos com base nas escolhas éticas e decisões tomadas pelo usuário.",
-    tech: ["Branching Narrative", "Character Design", "Roteiro Técnico", "Psicologia do Jogo"]
+    description: "RPG com atmosfera imersiva, ruínas antigas, combate estratégico por turnos e história com mistérios ocultos.",
+    tech: ["RPG", "Pixel Art", "Storytelling", "Trilha Sonora"]
   },
   {
     id: 12,
-    title: "Projeto de Gamificação #12",
-    theme: "Design de Interface & Acessibilidade em Jogos",
-    tag: "UI/UX",
+    title: "Brinqueduque",
+    theme: "Brinquedoteca Virtual & Aprendizado Infantil",
+    tag: "Gamificação",
     category: "gamificacao",
+    image: "assets/gamificacao/grupo_12.jpg",
+    url: "https://brinqueduque.netlify.app/",
     members: ["Laura Campos Crociari", "Maria Luiza Constantino Garcia", "Lucas Cicareli da Costa", "Cauã Scatena da Costa"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Estudo de usabilidade, contraste de cores e legibilidade voltados para tornar produtos multimídia inclusivos e acessíveis.",
-    tech: ["Acessibilidade (a11y)", "Design Systems", "Testes de Ergonomia", "UI/UX"]
+    description: "Ambiente lúdico com brinquedos educativos interativos desenvolvidos para enriquecer a criatividade e a coordenação motora.",
+    tech: ["Pedagogia", "Acessibilidade", "Animações", "Interface Infantil"]
   },
   {
     id: 13,
-    title: "Projeto de Gamificação #13",
-    theme: "Feedback Imediato e Gameloop",
+    title: "Arcadia",
+    theme: "Ação Retrô & Plataforma Arcade",
     tag: "Gamedev",
     category: "games",
+    image: "assets/gamificacao/grupo_13.jpg",
+    url: "https://rafascalfi.itch.io/arcadia",
     members: ["Enzo Brito Mendes", "Beatryz Sthefany da Silva Leonaldo", "Eduardo Cestari", "Kawã Higor Civitelli Vieira"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Otimização do ciclo central de jogabilidade (Core Loop), trazendo sensação de impacto visual e sonoro contínuo ('game feel').",
-    tech: ["Game Feel", "Animação de Feedback", "Sistemas de Pontuação", "Playtest"]
+    description: "Jogo de ação com estética arcade retrô publicado no itch.io, com saltos precisos, inimigos ágeis e chefões desafiadores.",
+    tech: ["itch.io", "Retro Arcade", "Game Physics", "Level Design"]
   },
   {
     id: 14,
-    title: "Projeto de Gamificação #14",
-    theme: "Gamificação Comunitária e Cidadania",
+    title: "Brasil Brasil",
+    theme: "Cultura Brasileira, Folclore & Aventura",
     tag: "Social",
     category: "social",
+    image: "assets/gamificacao/grupo_14.jpg",
+    url: "https://rafascalfi.itch.io/brasilbrasil",
     members: ["Otávio Salmaso Sartoreto", "Jessyca Cristina de Sousa Pereira", "Lariane Araujo de Oliveira", "Matheus Roçafa Rodrigues", "Kauan Vian Dias"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Proposta de game educativo voltado ao engajamento em projetos comunitários, saúde pública e conscientização ambiental.",
-    tech: ["Impacto Social", "Educação Gamificada", "Comunicação Visual", "Direção de Arte"]
+    description: "Celebração das lendas, biomas e riqueza cultural do Brasil em uma jornada envolvente com arte temática autoral.",
+    tech: ["itch.io", "Cultura Nacional", "Concept Art", "Folclore"]
   },
   {
     id: 15,
-    title: "Projeto de Gamificação #15",
-    theme: "Multimídia Interativa & Experiência Digital",
-    tag: "Multimídia",
-    category: "audiovisual",
+    title: "Mathrush 2025",
+    theme: "Corrida Matemática & Desafios de Agilidade",
+    tag: "Gamificação",
+    category: "gamificacao",
+    image: "assets/gamificacao/grupo_15.jpg",
+    url: "https://mathrush2025.netlify.app/",
     members: ["João Vitor Ribeiro Larocca", "Amanda Lima de Sousa", "Matheus da Silva Feltrim", "Melissa Ferrari de Jesus"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Produção de conteúdo rico combinando gráficos vetoriais, trilha sonora e microinterações para plataformas digitais.",
-    tech: ["Produção Digital", "Animação 2D", "Interface Multimídia", "Design Interativo"]
+    description: "Competição dinâmica contra o tempo para resolver cálculos mentais e avançar de fase em alta velocidade.",
+    tech: ["Math Game", "Competição", "Speedrun", "Gamificação"]
   },
   {
     id: 16,
-    title: "Projeto de Gamificação #16",
-    theme: "Inovação, Juventude e Tendências de Games",
+    title: "Vortex 2025",
+    theme: "Ficção Científica, Gravidade & Física Espacial",
     tag: "Gamedev",
     category: "games",
+    image: "assets/gamificacao/grupo_16.jpg",
+    url: "https://vortex2025.netlify.app/",
     members: ["Lívia Sousa Nascimento", "Carolina Soares da Costa", "Lucas Garcia de Souza Reis", "Hisabelly Almeida Konda"],
     supervisors: ["Prof. Heber Roberto", "Prof. Rafael Scalfi"],
-    description: "Exploração de novas estéticas visuais e temáticas contemporâneas na criação de propostas de jogos para jovens.",
-    tech: ["Tendências de Games", "Concept Art", "Game Pitch", "Prototipagem Rápida"]
+    description: "Experiência sci-fi com distorção gravitacional, visual cyberpunk moderno e labirintos espaciais desafiadores.",
+    tech: ["Sci-Fi", "Física de Jogos", "Cyberpunk", "Shader FX"]
   }
 ];
 
@@ -269,7 +301,7 @@ const PHOTOS_2025 = Array.from({ length: 133 }, (_, i) => {
 let currentGallery = [];
 let currentPhotoIndex = 0;
 
-// DOM Elements
+// DOM Elements Initialization
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects(PROJECT_GROUPS);
   renderAudiovisualVideos();
@@ -284,14 +316,14 @@ document.addEventListener("DOMContentLoaded", () => {
   setupLightboxKeyboard();
 });
 
-// Render Projects List
+// Render Projects List with Real Banners & Play Links
 function renderProjects(projects) {
   const container = document.getElementById("projects-grid");
   const counter = document.getElementById("projects-count");
   if (!container) return;
 
   if (counter) {
-    counter.innerText = `${projects.length} projeto${projects.length !== 1 ? 's' : ''} encontrado${projects.length !== 1 ? 's' : ''}`;
+    counter.innerText = `${projects.length} projeto${projects.length !== 1 ? 's' : ''} de gamificação`;
   }
 
   if (projects.length === 0) {
@@ -308,66 +340,94 @@ function renderProjects(projects) {
   }
 
   container.innerHTML = projects.map(p => `
-    <div class="glass-panel rounded-2xl p-6 card-hover-lift flex flex-col justify-between border border-slate-800 hover:border-purple-500/40 relative group">
-      <div>
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300">
+    <div class="glass-panel rounded-2xl overflow-hidden card-hover-lift flex flex-col justify-between border border-slate-800 hover:border-purple-500/50 relative group">
+      
+      <!-- Banner Oficial do Projeto -->
+      <div class="relative aspect-video bg-slate-900 overflow-hidden border-b border-slate-800/80">
+        <img 
+          src="${p.image}" 
+          alt="${p.title}" 
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%230f172a%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%238b5cf6%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3E🎮%20${encodeURIComponent(p.title)}%3C%2Ftext%3E%3C%2Fsvg%3E'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+        
+        <!-- Badges sobre a imagem -->
+        <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+          <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur border border-purple-500/30 text-purple-300">
             ${p.tag}
           </span>
-          <span class="text-xs text-slate-400 font-mono">Grupo #${p.id < 10 ? '0' + p.id : p.id}</span>
-        </div>
-
-        <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors mb-2">
-          ${p.title}
-        </h3>
-        <p class="text-sm text-cyan-400/90 font-medium mb-3">
-          ${p.theme}
-        </p>
-        <p class="text-xs text-slate-400 mb-5 leading-relaxed line-clamp-3">
-          ${p.description}
-        </p>
-
-        <!-- Integrantes do Grupo -->
-        <div class="bg-slate-900/60 rounded-xl p-3 border border-slate-800/80 mb-4">
-          <div class="text-[11px] font-semibold tracking-wider text-slate-400 uppercase mb-2 flex items-center gap-1.5">
-            <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            Alunos Desenvolvedores
-          </div>
-          <ul class="text-xs text-slate-300 space-y-1">
-            ${p.members.map(m => `
-              <li class="flex items-center gap-1.5 truncate">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-                <span class="truncate">${m}</span>
-              </li>
-            `).join('')}
-          </ul>
+          <span class="text-[10px] text-slate-300 font-mono bg-slate-950/80 backdrop-blur px-2 py-0.5 rounded border border-slate-800">
+            Grupo #${p.id < 10 ? '0' + p.id : p.id}
+          </span>
         </div>
       </div>
 
-      <div>
-        <!-- Tech Tags -->
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          ${p.tech.map(t => `
-            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">
-              ${t}
-            </span>
-          `).join('')}
+      <!-- Conteúdo do Card -->
+      <div class="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors mb-1">
+            ${p.title}
+          </h3>
+          <p class="text-xs text-cyan-400 font-medium mb-3">
+            ${p.theme}
+          </p>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed line-clamp-2">
+            ${p.description}
+          </p>
+
+          <!-- Integrantes do Grupo -->
+          <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+            <div class="text-[10px] font-bold tracking-wider text-slate-400 uppercase mb-1.5 flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              Desenvolvido por:
+            </div>
+            <ul class="text-[11px] text-slate-300 space-y-1">
+              ${p.members.map(m => `
+                <li class="flex items-center gap-1.5 truncate">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0"></span>
+                  <span class="truncate">${m}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
         </div>
 
-        <!-- Mentoria & Botão Detalhes -->
-        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
-          <span class="text-[11px] text-slate-400">
-            Prof. Heber & Prof. Scalfi
-          </span>
-          <button onclick="openProjectModal(${p.id})" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center gap-1 hover:underline">
-            Ver detalhes
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        <div>
+          <!-- Botão Principal: Jogar / Acessar Jogo Original -->
+          <a 
+            href="${p.url}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-purple-600/30 hover:shadow-purple-600/50 transition-all mb-2.5 border border-purple-400/30"
+          >
+            <svg class="w-4 h-4 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-          </button>
+            Jogar / Acessar Projeto
+            <svg class="w-3 h-3 text-purple-300 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+
+          <!-- Botão Ficha Técnica / Detalhes -->
+          <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-[11px] text-slate-400 truncate">
+              Heber & Scalfi
+            </span>
+            <button onclick="openProjectModal(${p.id})" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center gap-1 hover:underline text-xs">
+              Ver Ficha
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
+
       </div>
     </div>
   `).join('');
@@ -765,7 +825,12 @@ function openProjectModal(id) {
       </button>
     </div>
 
-    <div class="space-y-4 my-6">
+    <!-- Banner no Modal -->
+    <div class="rounded-xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 mb-6">
+      <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover" />
+    </div>
+
+    <div class="space-y-4 mb-6">
       <div>
         <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Sobre o Projeto</h4>
         <p class="text-sm text-slate-300 leading-relaxed">${project.description}</p>
@@ -776,7 +841,7 @@ function openProjectModal(id) {
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
-          Equipe de Estudantes
+          Desenvolvido por:
         </h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
           ${project.members.map(m => `
@@ -799,10 +864,27 @@ function openProjectModal(id) {
         </div>
       </div>
 
+      <!-- Botão de Ação Direta no Modal -->
+      <a 
+        href="${project.url}" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-bold flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30 transition-all border border-purple-400/30"
+      >
+        <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Jogar / Abrir Projeto Completo no Navegador
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+
       <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
         <div>
           <span class="block text-slate-400">Supervisão Pedagógica:</span>
-          <span class="font-semibold text-slate-200">${project.supervisors.join(" & ")}</span>
+          <span class="font-semibold text-slate-200">Prof. Heber Roberto & Prof. Rafael Scalfi</span>
         </div>
         <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 font-mono">SESI Fernandópolis</span>
       </div>
