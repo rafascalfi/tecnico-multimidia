@@ -78,7 +78,10 @@
           <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Fotos & Vídeos</span>
         </a>
         <a href="#audiovisual" class="hover:text-cyan-400 transition-colors">Produções</a>
-        <a href="#gamificacao" class="hover:text-cyan-400 transition-colors">Projetos</a>
+        <a href="#gamificacao" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+          Projetos
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">2026 / 2025</span>
+        </a>
         <a href="#docentes" class="hover:text-cyan-400 transition-colors">Docentes</a>
       </nav>
 
@@ -107,7 +110,11 @@
       <a href="#areas" class="block py-2 text-slate-300 hover:text-cyan-400">Competências</a>
       <a href="#feira" class="block py-2 text-slate-300 hover:text-cyan-400">Feira de Games (Fotos & Vídeos)</a>
       <a href="#audiovisual" class="block py-2 text-slate-300 hover:text-cyan-400">Produções Audiovisuais</a>
-      <a href="#gamificacao" class="block py-2 text-slate-300 hover:text-cyan-400">Projetos de Gamificação</a>
+      <a href="#gamificacao" onclick="if(window.switchProjectTab) window.switchProjectTab('2026')" class="block py-2 text-cyan-300 font-bold flex items-center justify-between">
+        <span>Gamificação 2026 (Portal 3º EM)</span>
+        <span class="text-[10px] px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">NOVO</span>
+      </a>
+      <a href="#gamificacao" onclick="if(window.switchProjectTab) window.switchProjectTab('2025')" class="block py-2 text-slate-300 hover:text-cyan-400">Projetos de Gamificação (16 Grupos)</a>
       <a href="#docentes" class="block py-2 text-slate-300 hover:text-cyan-400">Corpo Docente</a>
     </div>
   </header>
@@ -140,7 +147,7 @@
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
             </svg>
-            Ver Projetos dos Alunos (16 Grupos)
+            Ver Projetos dos Alunos (2026 & 2025)
           </a>
 
           <a href="#audiovisual" class="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-500 transition-all flex items-center justify-center gap-2">
@@ -515,70 +522,195 @@
     </div>
   </section>
 
-  <!-- VITRINE DE GAMIFICAÇÃO (16 GRUPOS DE ALUNOS) -->
+  <!-- VITRINE DE PROJETOS & GAMIFICAÇÃO (2026 • 2025) -->
   <section id="gamificacao" class="py-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30">
-          Galeria de Trabalhos Práticos
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-3 mb-4">
-          Showcase de Gamificação dos Alunos
-        </h2>
-        <p class="text-sm text-slate-400">
-          Confira os 16 projetos autorais desenvolvidos pelas equipes de estudantes, sob a mentoria dos professores Heber Roberto e Rafael Scalfi.
-        </p>
-      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30">
+            Galeria de Trabalhos Práticos
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading mt-3 mb-2">
+            Showcase de Projetos & Gamificação
+          </h2>
+          <p class="text-sm text-slate-400 max-w-2xl">
+            Projetos autorais desenvolvidos pelos estudantes em GameMaker Studio, Unity 3D, Web e Ambientes Interativos sob a mentoria dos professores do curso.
+          </p>
+        </div>
 
-      <!-- Search & Filters Bar -->
-      <div class="glass-panel p-4 rounded-2xl border border-slate-800 mb-10">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <!-- Edition Tabs: Gamificação 2026 (Ativa por padrão) vs Gamificação 2025 (16 Grupos) -->
+        <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-xl bg-slate-900 border border-slate-800">
+          <button data-project-tab="2026" class="project-tab-btn active px-4 py-2.5 rounded-lg text-xs font-bold border border-transparent transition-all flex items-center gap-2">
+            <span>Gamificação 2026</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-mono">NOVO PORTAL</span>
+          </button>
+          <button data-project-tab="2025" class="project-tab-btn px-4 py-2.5 rounded-lg text-xs font-bold border border-transparent transition-all text-slate-400 hover:text-white flex items-center gap-2">
+            <span>Gamificação 2025</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 font-mono">16 Grupos</span>
+          </button>
           
-          <!-- Search Input -->
-          <div class="relative w-full md:w-96">
-            <input 
-              type="text" 
-              id="search-input" 
-              placeholder="Buscar por aluno, tema ou grupo..." 
-              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
-            />
-            <svg class="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          <a href="https://gamificacao-2026.netlify.app/" target="_blank" rel="noopener noreferrer" class="ml-1 hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg text-xs font-bold text-cyan-300 hover:text-white bg-cyan-950/60 hover:bg-cyan-900/70 border border-cyan-500/40 hover:border-cyan-400 transition-all shadow-sm" title="Acessar https://gamificacao-2026.netlify.app/">
+            <span>gamificacao-2026.netlify.app</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-          </div>
-
-          <!-- Category Filter Buttons -->
-          <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 text-xs font-semibold">
-            <button data-filter="all" class="filter-btn px-3.5 py-2 rounded-xl bg-purple-600 text-white border border-purple-400 transition-all">
-              Todos
-            </button>
-            <button data-filter="gamificacao" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
-              Gamificação
-            </button>
-            <button data-filter="games" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
-              Gamedev
-            </button>
-            <button data-filter="audiovisual" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
-              Multimídia
-            </button>
-            <button data-filter="social" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
-              Social
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Counter Indicator -->
-        <div class="flex items-center justify-between text-xs text-slate-400 mt-3 pt-3 border-t border-slate-800/80">
-          <span id="projects-count">16 projetos disponíveis</span>
-          <span class="text-slate-500">Supervisão: Prof. Heber Roberto & Prof. Rafael Scalfi</span>
+          </a>
         </div>
       </div>
 
-      <!-- 16 Groups Grid Container -->
-      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Injected via app.js -->
+      <!-- TAB 2026: GAMIFICAÇÃO 2026 (PORTAL OFICIAL 3º EM) -->
+      <div id="project-content-2026" class="project-content">
+        
+        <!-- Showcase Box do Portal 2026 -->
+        <div class="glass-panel-elevated rounded-3xl p-6 sm:p-10 border border-cyan-500/40 relative overflow-hidden mb-10">
+          <div class="absolute -right-20 -top-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="max-w-2xl">
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-bold">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                  Portal Oficial no Ar
+                </span>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300">
+                  3º EM • Terceirão 2026
+                </span>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300">
+                  SESI / SENAI
+                </span>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading mb-3">
+                Portal de Jogos & Gamificação 2026
+              </h3>
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                Vitrine online dos projetos integradores de desenvolvimento e engenharia desenvolvidos pelos estudantes. Jogue no navegador os projetos em <strong>GameMaker Studio</strong> e conheça a simulação 3D em <strong>Unity</strong>, com foco em segurança do trabalho (NR-10/NR-12), automação de linhas de montagem, logística e gestão energética.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-3">
+                <a href="https://gamificacao-2026.netlify.app/" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 shadow-lg shadow-cyan-600/30 hover:shadow-cyan-600/50 transition-all flex items-center gap-2.5 group">
+                  <svg class="w-5 h-5 text-cyan-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  <span>Acessar Portal Gamificação 2026</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+
+                <a href="https://gamificacao-2026.netlify.app/#como-jogar" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl text-sm font-bold text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700 transition-all flex items-center gap-2">
+                  <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <span>Downloads & Instruções</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Mini Destaques do Portal 2026 -->
+            <div class="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-3 shrink-0">
+              <div class="glass-panel p-4 rounded-xl border border-slate-800 text-center lg:text-left">
+                <div class="text-2xl font-black text-cyan-400 font-heading">9 Jogos</div>
+                <div class="text-xs text-slate-400">Projetos Concluídos</div>
+              </div>
+              <div class="glass-panel p-4 rounded-xl border border-slate-800 text-center lg:text-left">
+                <div class="text-2xl font-black text-purple-400 font-heading">GameMaker & Unity</div>
+                <div class="text-xs text-slate-400">Engines de Alto Desempenho</div>
+              </div>
+              <div class="glass-panel p-4 rounded-xl border border-slate-800 text-center lg:text-left col-span-2 sm:col-span-1">
+                <div class="text-2xl font-black text-emerald-400 font-heading">Web & .EXE</div>
+                <div class="text-xs text-slate-400">Jogue Online ou Baixe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid dos 9 Projetos do Portal 2026 -->
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h4 class="text-lg font-bold text-white font-heading">Catálogo de Jogos do 3º EM (2026)</h4>
+            <p class="text-xs text-slate-400">Clique em qualquer jogo para acessar diretamente a página do projeto no portal oficial.</p>
+          </div>
+          <span class="text-xs font-mono text-cyan-400 px-3 py-1 rounded bg-slate-900 border border-slate-800">
+            9 Jogos Disponíveis
+          </span>
+        </div>
+
+        <div id="projects-2026-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Injetado dinamicamente via app.js -->
+        </div>
+
+        <!-- Banner Inferior com Link Direto -->
+        <div class="mt-10 p-6 rounded-2xl bg-gradient-to-r from-cyan-950/60 via-slate-900 to-purple-950/60 border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div>
+            <h4 class="text-base font-bold text-white mb-1">Deseja experimentar todos os jogos e desafios industriais?</h4>
+            <p class="text-xs text-slate-300">Acesse o portal completo com execução direta no navegador, minidesafios e downloads dos códigos-fonte originais.</p>
+          </div>
+          <a href="https://gamificacao-2026.netlify.app/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-md shadow-cyan-600/30 transition-all shrink-0 flex items-center gap-2">
+            <span>Visitar Portal 2026</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- TAB 2025: GAMIFICAÇÃO 2025 (16 GRUPOS DE ALUNOS) -->
+      <div id="project-content-2025" class="project-content hidden">
+
+        <!-- Search & Filters Bar -->
+        <div class="glass-panel p-4 rounded-2xl border border-slate-800 mb-10">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <!-- Search Input -->
+            <div class="relative w-full md:w-96">
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Buscar por aluno, tema ou grupo..." 
+                class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+              />
+              <svg class="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 text-xs font-semibold">
+              <button data-filter="all" class="filter-btn px-3.5 py-2 rounded-xl bg-purple-600 text-white border border-purple-400 transition-all">
+                Todos
+              </button>
+              <button data-filter="gamificacao" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+                Gamificação
+              </button>
+              <button data-filter="games" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+                Gamedev
+              </button>
+              <button data-filter="audiovisual" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+                Multimídia
+              </button>
+              <button data-filter="social" class="filter-btn px-3.5 py-2 rounded-xl bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white transition-all">
+                Social
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Counter Indicator -->
+          <div class="flex items-center justify-between text-xs text-slate-400 mt-3 pt-3 border-t border-slate-800/80">
+            <span id="projects-count">16 projetos disponíveis</span>
+            <span class="text-slate-500">Supervisão: Prof. Heber Roberto & Prof. Rafael Scalfi</span>
+          </div>
+        </div>
+
+        <!-- 16 Groups Grid Container -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <!-- Injected via app.js -->
+        </div>
+
       </div>
 
     </div>

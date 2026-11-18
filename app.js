@@ -211,6 +211,101 @@ const PROJECT_GROUPS = [
   }
 ];
 
+// Catálogo de Jogos & Projetos - Gamificação 2026 (Portal 3º EM SESI SENAI)
+const GAMES_2026 = [
+  {
+    id: "agrolock",
+    title: "AgroLock",
+    categoryLabel: "Segurança & LOTO (NR-12 / NR-10)",
+    engineBadge: "GameMaker HTML5",
+    thumbnail: "assets/gamificacao-2026/agrolock_preview.png",
+    tags: ["LOTO", "NR-12", "Agroindústria", "Escape Room", "Bloqueio Elétrico"],
+    shortDesc: "Escape Room e simulador de segurança industrial e agrícola. Aplique os procedimentos de Lockout/Tagout (LOTO) em maquinário pesado antes da manutenção preventiva.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "factory_on_island",
+    title: "Factory on the Island",
+    categoryLabel: "Automação & Gestão Industrial",
+    engineBadge: "GameMaker HTML5 / Windows",
+    thumbnail: "assets/gamificacao-2026/factory_map.png",
+    tags: ["Gestão", "Sobrevivência", "Geradores", "Indústria 4.0", "Pixel Art"],
+    shortDesc: "Assuma o controle de uma fábrica isolada em uma ilha. Restaure sistemas, repare a ponte para a refinaria, equilibre energia com geradores e placas solares.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "wood_energy_tycoon",
+    title: "Wood Energy Tycoon",
+    categoryLabel: "Tycoon & Eficiência Energética",
+    engineBadge: "Unity 3D Standalone",
+    thumbnail: "assets/gamificacao-2026/wood_energy_preview.svg",
+    tags: ["Unity 3D", "Biomassa", "Energia Limpa", "Simulação", "Sustentabilidade"],
+    shortDesc: "Simulador 3D completo de gestão de usina de biomassa e silvicultura sustentável. Desenvolvido em Unity com física e renderização DirectX 12.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "safelift",
+    title: "SafeLift",
+    categoryLabel: "Logística Segura & Empilhadeiras",
+    engineBadge: "GameMaker HTML5",
+    thumbnail: "assets/gamificacao-2026/safelift_preview.png",
+    tags: ["Empilhadeira", "Logística", "NR-11", "Prevenção de Queda", "Galpão"],
+    shortDesc: "Simulação de operação segura de empilhadeiras em centro logístico. Transporte paletes e cargas industriais respeitando velocidade e zonas de pedestres.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "omega",
+    title: "OMEGA: Assembly & Automation",
+    categoryLabel: "Automação & Esteiras",
+    engineBadge: "GameMaker HTML5",
+    thumbnail: "assets/gamificacao-2026/omega_assembler.png",
+    tags: ["Automação", "Linha de Montagem", "Sensores", "Braço Robótico", "Puzzles"],
+    shortDesc: "Construa, sincronize e otimize uma linha de montagem com esteiras industriais, sensores fotoelétricos, braços robóticos e montadoras automatizadas.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "torno_cnc",
+    title: "Simulador Torno CNC",
+    categoryLabel: "Usinagem CNC & Mecânica",
+    engineBadge: "GameMaker HTML5 / Windows",
+    thumbnail: "assets/gamificacao-2026/torno_preview.png",
+    tags: ["CNC", "Torno Mecânico", "G-Code", "Usinagem", "Metalmecânica"],
+    shortDesc: "Simulador técnico de operação de Torno Mecânico e CNC. Calcule rotação (RPM), profundidade de corte, avanço e realize o torneamento de precisão de eixos de aço.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "virtual_restoration",
+    title: "Virtual Restoration",
+    categoryLabel: "Gêmeo Digital & Manutenção",
+    engineBadge: "GameMaker HTML5",
+    thumbnail: "assets/gamificacao-2026/virtual_restoration_fornalha.png",
+    tags: ["Gêmeo Digital", "Termografia", "Fornalha", "Manutenção Preditiva", "Sensores"],
+    shortDesc: "Gêmeo digital e diagnóstico em tempo real de fornalhas e caldeiras industriais. Analise termografia, vibração e substitua componentes antes da falha catastrófica.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "game2",
+    title: "GAME 2: Técnico Multidisciplinar",
+    categoryLabel: "Treinamento Técnico",
+    engineBadge: "GameMaker HTML5",
+    thumbnail: "assets/gamificacao-2026/game2_bg_menu.png",
+    tags: ["Eletrotécnica", "Mecânica", "Construção Civil", "Metalurgia", "Quiz"],
+    shortDesc: "Treinamento rápido de competências técnicas integradas: elétrica residencial e industrial, mecânica de manutenção, conformação de metais e obras civis.",
+    url: "https://gamificacao-2026.netlify.app/"
+  },
+  {
+    id: "tycoon2d",
+    title: "Tycoon 2D: Eficiência Fabril",
+    categoryLabel: "Gestão Energética & Chão de Fábrica",
+    engineBadge: "GameMaker HTML5",
+    thumbnail: "assets/gamificacao-2026/tycoon2d_bg.png",
+    tags: ["Tycoon 2D", "Gestão Energética", "Chão de Fábrica", "Coolers", "Geradores"],
+    shortDesc: "Simulador 2D em visão lateral de eficiência energética. Gerencie geradores, coolers de resfriamento, esteiras de produção e evite sobrecargas na rede elétrica.",
+    url: "https://gamificacao-2026.netlify.app/"
+  }
+];
+
+
 // Audiovisual Productions (ECOFILMES, SESI, Campanhas)
 const AUDIOVISUAL_VIDEOS = [
   {
@@ -310,6 +405,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPhotos("gallery-2024", PHOTOS_2024, "I Feira de Games 2024");
   setupFilters();
   setupSearch();
+  setupProjectTabs();
+  renderProjects2026();
   setupFeiraTabs();
   setupCountdown();
   setupModals();
@@ -428,6 +525,77 @@ function renderProjects(projects) {
           </div>
         </div>
 
+      </div>
+    </div>
+  `).join('');
+}
+
+
+// Render Projects List for Gamificação 2026 (Portal 3º EM)
+function renderProjects2026() {
+  const container = document.getElementById("projects-2026-grid");
+  if (!container) return;
+
+  container.innerHTML = GAMES_2026.map(g => `
+    <div class="glass-panel rounded-2xl overflow-hidden card-hover-lift flex flex-col justify-between border border-slate-800 hover:border-cyan-500/50 transition-all group">
+      <div>
+        <!-- Imagem Thumbnail -->
+        <div class="relative aspect-video bg-slate-900 overflow-hidden">
+          <img 
+            src="${g.thumbnail}" 
+            alt="${g.title}" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+          
+          <!-- Badges de Categoria & Engine -->
+          <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between gap-2">
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-950/80 backdrop-blur border border-cyan-500/40 text-cyan-300 truncate">
+              ${g.categoryLabel}
+            </span>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-950/80 backdrop-blur border border-purple-500/40 text-purple-300 shrink-0">
+              ${g.engineBadge}
+            </span>
+          </div>
+        </div>
+
+        <!-- Conteúdo do Card -->
+        <div class="p-5">
+          <h3 class="text-base font-bold text-white group-hover:text-cyan-300 transition-colors mb-2 font-heading">
+            ${g.title}
+          </h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4 line-clamp-3">
+            ${g.shortDesc}
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            ${g.tags.slice(0, 3).map(t => `
+              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">
+                #${t}
+              </span>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação: Jogar no Portal 2026 -->
+      <div class="p-5 pt-0">
+        <a 
+          href="${g.url}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-cyan-600/25 hover:shadow-cyan-600/40 transition-all border border-cyan-400/30 group/btn"
+        >
+          <svg class="w-4 h-4 text-cyan-200" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          Jogar no Portal 2026
+          <svg class="w-3 h-3 text-cyan-200 group-hover/btn:translate-x-0.5 transition-transform ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   `).join('');
@@ -665,6 +833,51 @@ function filterAndSearchProjects(filter, query) {
   }
 
   renderProjects(filtered);
+}
+
+
+// Project Edition Tabs (Gamificação 2026 vs Gamificação 2025)
+function setupProjectTabs() {
+  const tabBtns = document.querySelectorAll(".project-tab-btn");
+  const content2026 = document.getElementById("project-content-2026");
+  const content2025 = document.getElementById("project-content-2025");
+
+  function switchProjectTab(year) {
+    tabBtns.forEach(b => {
+      if (b.getAttribute("data-project-tab") === year) {
+        b.classList.add("active", "border-cyan-500", "text-white");
+        b.classList.remove("text-slate-400");
+      } else {
+        b.classList.remove("active", "border-cyan-500", "text-white");
+        b.classList.add("text-slate-400");
+      }
+    });
+
+    if (year === "2026") {
+      if (content2026) content2026.classList.remove("hidden");
+      if (content2025) content2025.classList.add("hidden");
+    } else {
+      if (content2026) content2026.classList.add("hidden");
+      if (content2025) content2025.classList.remove("hidden");
+    }
+  }
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const year = btn.getAttribute("data-project-tab");
+      switchProjectTab(year);
+    });
+  });
+
+  // Expose to window for external/nav links
+  window.switchProjectTab = switchProjectTab;
+
+  // Check URL hash on load
+  if (window.location.hash === "#gamificacao-2026") {
+    switchProjectTab("2026");
+  } else if (window.location.hash === "#gamificacao-2025") {
+    switchProjectTab("2025");
+  }
 }
 
 // Feira Tabs (2024, 2025, 2026)
@@ -905,6 +1118,7 @@ function closeProjectModal() {
 }
 
 // Window global exposure
+window.renderProjects2026 = renderProjects2026;
 window.openVideoModal = openVideoModal;
 window.closeVideoModal = closeVideoModal;
 window.openProjectModal = openProjectModal;
