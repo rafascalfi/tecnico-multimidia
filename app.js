@@ -285,7 +285,7 @@ const GAMES_2026 = [
   },
   {
     id: "game2",
-    title: "GAME 2: Técnico Multidisciplinar",
+    title: "Missão EPI",
     categoryLabel: "Treinamento Técnico",
     engineBadge: "GameMaker HTML5",
     thumbnail: "assets/gamificacao-2026/game2_bg_menu.png",
